@@ -4,6 +4,10 @@ import bodyParser from "body-parser";
 const app = express();
 const port = process.env.PORT || 4000;
 
+// Set view engine
+app.set('view engine', 'ejs');
+app.set('views', './views');
+
 // In-memory data store
 let posts = [
   {
